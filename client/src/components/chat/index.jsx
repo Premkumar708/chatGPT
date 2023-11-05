@@ -11,7 +11,9 @@ const Chat = () => {
     <div style={{flexBasis: "100%" }}>
       <MultiChatSocket {...chatProps}/>
       <MultiChatWindow {...chatProps} style={{height:"100vh"}}
-      renderChatHeader={(chat)=> <Header chat= {chat}/>}/>   
+      renderChatHeader={(chat)=> 
+      <Header chat= {chat}/>
+      }/>   
       </div>
   )
 }
