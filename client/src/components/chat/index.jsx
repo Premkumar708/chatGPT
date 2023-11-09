@@ -1,5 +1,6 @@
 import { useMultiChatLogic,MultiChatWindow,MultiChatSocket } from "react-chat-engine-advanced"
-import Header from "@/components/customHeader";
+import CustomerHeader from "@/components/customerHeader";
+import StandardMessageForm from "@/components/customMessageForm/StandardMessageForm";
 const Chat = () => {
   const chatProps = useMultiChatLogic(
     import.meta.env.VITE_PROJECT_ID,
@@ -12,8 +13,12 @@ const Chat = () => {
       <MultiChatSocket {...chatProps}/>
       <MultiChatWindow {...chatProps} style={{height:"100vh"}}
       renderChatHeader={(chat)=> 
-      <Header chat= {chat}/>
-      }/>   
+      <CustomerHeader chat= {chat}/>}
+      //  urenderMessageForm={(props)=>{ 
+      //    retrn(
+        //    <StandardMessageForm props = {props} activeChat ={chatProps.chat}/>
+        //  )}}
+      />   
       </div>
   )
 }
